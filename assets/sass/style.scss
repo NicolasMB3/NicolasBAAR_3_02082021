@@ -1,0 +1,332 @@
+@import "../css/normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&family=Shrikhand&display=swap');
+
+$primary: #9356DC;
+$secondary: #FF79DA;
+$third: #99E2D0;
+$grey: #7e7e7e;
+$dark: rgb(0, 0, 0);
+$light: rgb(255, 255, 255);
+
+@mixin box-shadow($value) {
+   box-shadow: 0 0px $value rgba(0, 0, 0, 0.2);
+}
+@mixin box-gradiant {
+   background: rgb(255,121,218);
+   background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 100%);
+}
+@mixin display-flex{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+body {
+   scroll-behavior: smooth;
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+   a {
+      text-decoration: none; 
+   }
+   header {
+      @include box-shadow(20px);
+      @include display-flex;
+      position: relative;
+      height: 4.5rem;
+   }
+}
+.container {
+   .location--container {
+      @include display-flex;
+      height: 4rem;
+      font-size: 18px;
+      background-color: #eaeaea;
+      color: $grey;
+         .fa-map-marker-alt {
+            position: relative;
+            right: 1.3rem;
+         }
+   }
+   .main--location {
+      @include display-flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: #f6f6f6;
+      padding: 1rem 2rem 3rem 2rem;
+         .title__location {
+            width: 80%;
+            margin-bottom: 0.5rem;
+         }
+         .subtitle__location {
+            margin-top: 0rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+         }
+         .button__location {
+            @include box-shadow(20px);
+            @include box-gradiant;
+            border-radius: 30px;
+            display: inline-block;
+            cursor: pointer;
+            color: $light;
+            font-size: 18px;
+            padding: 15px 22px;
+            text-decoration: none;
+         }
+   }
+   .main--fonction {
+      padding-top: 1rem;
+      h2 {
+         padding-left: 1.5rem;
+      }
+      .grid--fonction {
+         padding: 2rem 3rem 2rem 3rem;
+         .grid--card {
+            position: relative;
+            @include box-shadow(20px);
+            display: grid;
+            grid-template-columns: 27% auto;
+            align-self: center;
+            margin-bottom: 2rem;
+            background-color: #f6f6f6;
+            height: 4.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 16px;
+            color: $dark;
+               .div--text {
+                  @include display-flex;
+                  align-self: center;
+                  height: 2rem;
+                  width: 2rem;
+                  border-radius: 20px;
+                  background-color: $primary;
+                  color: $light;
+                  position: absolute;
+                  margin-left: -0.8rem;
+               }
+               .text__fonction {
+                  align-self: center;
+               }
+               .fas {
+                  color: $grey;
+                  font-size: 20px;
+                  padding-left: 1rem;
+                  @include display-flex;
+               }
+               &:hover {
+                  background-color: #f5edff;
+                  .fas {
+                     color: $primary;
+                  }
+               }
+         }
+      }
+   }
+   .cards--container {
+      padding: 2rem 0 2rem 0;
+      background-color: #f6f6f6;
+      h2 {
+         padding-left: 1.5rem;
+      }
+      .cards-grid {
+         display: grid;
+         grid-auto-columns: 1fr; 
+         grid-template-columns: 1fr; 
+         grid-template-rows: 1fr; 
+         .cards--template {
+            border-radius: 1rem;
+            margin: 0.7rem 1rem 0.7rem 1rem;
+            position: relative;
+            background-color: $light;
+            @include box-shadow(20px);
+            .cards--news__grid {
+               @include display-flex;
+               position: absolute;
+               right: 5%;
+               top: 5%;
+               z-index: 1;
+               background-color: #99e2d0;
+               border-radius: 5px;
+               width: 5.5rem;
+               height: 2.2rem;
+               p {
+                  margin: 0;
+                  color: #008766;
+               }
+            }
+            img {
+               object-fit: cover;
+               object-position: center;
+               border-radius: 1rem 1rem 0 0;
+               height: 11rem;
+               width: 100%;
+            }
+            .cards--template__grid {
+               display: grid; 
+               padding: 1rem 1rem 1rem 1rem;
+               grid-auto-flow: row dense; 
+               grid-template-columns: 80% auto; 
+               grid-template-areas: 
+                 "div1 div3"
+                 "div2 div3"; 
+               h3 {
+                  grid-area: div1;
+                  margin-top: 0;
+                  margin-bottom: 0.5rem;
+                  color: $dark;
+               }
+               p {
+                  grid-area: div2;
+                  margin: 0;
+                  color: $dark;
+               }
+               i {
+                  grid-area: div3; 
+                  justify-self: center; 
+                  align-self: center; 
+                  font-size: 32px;
+               }
+            }
+         }
+      }
+   }
+}
+.footer-main {
+   padding: 1rem 2rem 2rem 2rem;
+   color: $light;
+   background-color: #353535;
+   .navigationLogo {
+      h3 {
+         font-size: 1.2rem;
+         font-family: 'Shrikhand', cursive;
+      }
+      .footer--grid {
+         .footer--grid__left {
+            display: flex;
+            align-items: center;
+            .fas {
+               width: 1.5rem;
+            }
+            p {
+               font-weight: 300;
+               margin: 0.3rem 0 0.3rem 0;
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 768px) {  
+   .choose--container {
+      margin: 0 2rem 0 2rem;
+   }
+   .container {
+      .main--fonction {
+         padding: 1rem 7% 1rem 7%;
+         h2 {
+            text-align: center;
+            font-size: 30px;
+         }
+         p {
+            text-align: center;
+         }
+         .grid--fonction {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 0 2rem; 
+            grid-template-areas: 
+              "grid__one grid__two"
+              "grid__third grid__third"; 
+            .grid__one { 
+               grid-area: grid__one; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               display: grid;
+               grid-template-columns: auto auto;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+            .grid__two { 
+               grid-area: grid__two; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+            .grid__third { 
+               grid-area: grid__third; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+         }
+      }
+      .cards--container {
+         h2 {
+            text-align: center;
+            font-size: 30px;
+         }
+         .cards-grid {
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            margin: 0 10% 3rem 10%;
+         }
+      }
+   }
+   .footer-main {
+      @include display-flex;
+      .navigationLogo {
+         h3 {
+            text-align: center;
+         }
+         width: 30rem;
+         .footer--grid {
+            display: grid;
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
+            justify-items: center; 
+            align-items: center; 
+            .grid--left {
+               grid-area: 1 / 1 / 2 / 2;
+            }
+            .grid--right {
+               grid-area: 1 / 2 / 2 / 3;
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 1200px) {  
+   .container {
+      .main--fonction {
+         .grid--fonction {
+            grid-auto-flow: row dense; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 4.5rem;
+            grid-template-areas: 
+              "grid__one grid__two grid__third"; 
+            justify-items: center; 
+            align-items: center; 
+         }
+      }
+   }
+}
