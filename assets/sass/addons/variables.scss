@@ -17,3 +17,15 @@ $light: rgb(255, 255, 255);
    justify-content: center;
    align-items: center;
 }
+@mixin button-gradiant{
+   @include box-shadow(20px);
+   @include box-gradiant;
+   border-radius: 30px;
+   display: inline-block;
+   cursor: pointer;
+   color: $light;
+   font-size: 18px;
+   margin: 1.5rem 0 1rem 0;
+   padding: 15px 35px;
+   text-decoration: none;
+}

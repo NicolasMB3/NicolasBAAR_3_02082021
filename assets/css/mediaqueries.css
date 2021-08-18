@@ -1,0 +1,155 @@
+/* @media */
+@media (min-width: 768px) {
+  body .testtest {
+    max-height: 25rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  .container-francaise {
+    margin: 0 5rem 0 5rem;
+    position: relative;
+    margin-top: -8rem;
+  }
+  .choose--container {
+    margin: 0 2rem 0 2rem;
+  }
+  .container .main--fonction {
+    padding: 1rem 7% 1rem 7%;
+  }
+  .container .main--fonction h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .container .main--fonction p {
+    text-align: center;
+  }
+  .container .main--fonction .grid--fonction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+    grid-template-areas: "grid__one grid__two" "grid__third grid__third";
+  }
+  .container .main--fonction .grid--fonction .grid__one {
+    grid-area: grid__one;
+    grid-template-columns: auto auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .container .main--fonction .grid--fonction .grid__one i {
+    justify-self: end;
+    padding-right: 1rem;
+  }
+  .container .main--fonction .grid--fonction .grid__one p {
+    justify-self: start;
+  }
+  .container .main--fonction .grid--fonction .grid__two {
+    grid-area: grid__two;
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+  .container .main--fonction .grid--fonction .grid__two i {
+    justify-self: end;
+    padding-right: 1rem;
+  }
+  .container .main--fonction .grid--fonction .grid__two p {
+    justify-self: start;
+  }
+  .container .main--fonction .grid--fonction .grid__third {
+    grid-area: grid__third;
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+  .container .main--fonction .grid--fonction .grid__third i {
+    justify-self: end;
+    padding-right: 1rem;
+  }
+  .container .main--fonction .grid--fonction .grid__third p {
+    justify-self: start;
+  }
+  .container .cards--container h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .container .cards--container .cards-grid {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 10% 3rem 10%;
+  }
+  .footer-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-main .navigationLogo {
+    width: 30rem;
+  }
+  .footer-main .navigationLogo h3 {
+    text-align: center;
+  }
+  .footer-main .navigationLogo .footer--grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .footer-main .navigationLogo .footer--grid .grid--left {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .footer-main .navigationLogo .footer--grid .grid--right {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-francaise {
+    margin: 0 15rem 0 15rem;
+    position: relative;
+    margin-top: -10rem;
+    overflow-wrap: break-word;
+  }
+  .container-francaise .text-title h1 {
+    margin-left: 2rem;
+  }
+  .container-francaise .text-title i {
+    margin-right: 2rem;
+  }
+  .container-francaise .menu-francaise {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 2rem;
+    grid-row-gap: 0px;
+    padding: 0 2rem 0 2rem;
+  }
+  .container-francaise .menu-francaise .menu-desk-one {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .container-francaise .menu-francaise .menu-desk-two {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .container-francaise .menu-francaise .menu-desk-third {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  .container-francaise .menu-francaise .button__plat {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  .container-francaise .menu-francaise .miam-menu {
+    height: 5rem;
+  }
+  .container-francaise .menu-francaise a {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .container .main--fonction .grid--fonction {
+    grid-auto-flow: row dense;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.5rem;
+    grid-template-areas: "grid__one grid__two grid__third";
+    justify-items: center;
+    align-items: center;
+  }
+}
+/*# sourceMappingURL=mediaqueries.css.map */
