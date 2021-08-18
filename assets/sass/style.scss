@@ -223,7 +223,7 @@ body {
    }
    .menu-francaise {
       display: grid;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
       grid-column-gap: 11px;
       grid-row-gap: 5px;
       justify-items: center; 
