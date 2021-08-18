@@ -20,7 +20,7 @@ body {
       height: 4.5rem;
       .navigationLogoBack {
          @include display-flex;
-         i {
+         a {
             position: absolute;
             left: 5%;
          }

@@ -30,7 +30,7 @@ body header .navigationLogoBack {
   align-items: center;
 }
 
-body header .navigationLogoBack i {
+body header .navigationLogoBack a {
   position: absolute;
   left: 5%;
 }
