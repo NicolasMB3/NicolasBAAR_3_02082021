@@ -1,39 +1,8 @@
-@import "../css/normalize.css";
+@import "normalize.css";
+@import "addons/variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&family=Shrikhand&display=swap');
+@import "addons/base.scss";
 
-$primary: #9356DC;
-$secondary: #FF79DA;
-$third: #99E2D0;
-$grey: #7e7e7e;
-$dark: rgb(0, 0, 0);
-$light: rgb(255, 255, 255);
-
-@mixin box-shadow($value) {
-   box-shadow: 0 0px $value rgba(0, 0, 0, 0.2);
-}
-@mixin box-gradiant {
-   background: rgb(255,121,218);
-   background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 100%);
-}
-@mixin display-flex{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-body {
-   scroll-behavior: smooth;
-   margin: 0;
-   font-family: 'Roboto', sans-serif;
-   a {
-      text-decoration: none; 
-   }
-   header {
-      @include box-shadow(20px);
-      @include display-flex;
-      position: relative;
-      height: 4.5rem;
-   }
-}
 .container {
    .location--container {
       @include display-flex;
@@ -191,6 +160,7 @@ body {
       }
    }
 }
+
 .footer-main {
    padding: 1rem 2rem 2rem 2rem;
    color: $light;
@@ -209,6 +179,7 @@ body {
             }
             p {
                font-weight: 300;
+               color: $light;
                margin: 0.3rem 0 0.3rem 0;
             }
          }
@@ -216,117 +187,4 @@ body {
    }
 }
 
-@media (min-width: 768px) {  
-   .choose--container {
-      margin: 0 2rem 0 2rem;
-   }
-   .container {
-      .main--fonction {
-         padding: 1rem 7% 1rem 7%;
-         h2 {
-            text-align: center;
-            font-size: 30px;
-         }
-         p {
-            text-align: center;
-         }
-         .grid--fonction {
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 0 2rem; 
-            grid-template-areas: 
-              "grid__one grid__two"
-              "grid__third grid__third"; 
-            .grid__one { 
-               grid-area: grid__one; 
-               grid-template-columns: auto auto; 
-               width: 100%;
-               display: grid;
-               grid-template-columns: auto auto;
-               i {
-                  justify-self: end; 
-                  padding-right: 1rem;
-               }
-               p {
-                  justify-self: start; 
-               }
-            }
-            .grid__two { 
-               grid-area: grid__two; 
-               grid-template-columns: auto auto; 
-               width: 100%;
-               i {
-                  justify-self: end; 
-                  padding-right: 1rem;
-               }
-               p {
-                  justify-self: start; 
-               }
-            }
-            .grid__third { 
-               grid-area: grid__third; 
-               grid-template-columns: auto auto; 
-               width: 100%;
-               i {
-                  justify-self: end; 
-                  padding-right: 1rem;
-               }
-               p {
-                  justify-self: start; 
-               }
-            }
-         }
-      }
-      .cards--container {
-         h2 {
-            text-align: center;
-            font-size: 30px;
-         }
-         .cards-grid {
-            grid-auto-columns: 1fr; 
-            grid-template-columns: 1fr 1fr; 
-            grid-template-rows: 1fr; 
-            margin: 0 10% 3rem 10%;
-         }
-      }
-   }
-   .footer-main {
-      @include display-flex;
-      .navigationLogo {
-         h3 {
-            text-align: center;
-         }
-         width: 30rem;
-         .footer--grid {
-            display: grid;
-            grid-auto-columns: 1fr; 
-            grid-template-columns: 1fr 1fr; 
-            justify-items: center; 
-            align-items: center; 
-            .grid--left {
-               grid-area: 1 / 1 / 2 / 2;
-            }
-            .grid--right {
-               grid-area: 1 / 2 / 2 / 3;
-            }
-         }
-      }
-   }
-}
-
-@media (min-width: 1200px) {  
-   .container {
-      .main--fonction {
-         .grid--fonction {
-            grid-auto-flow: row dense; 
-            grid-auto-columns: 1fr; 
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 4.5rem;
-            grid-template-areas: 
-              "grid__one grid__two grid__third"; 
-            justify-items: center; 
-            align-items: center; 
-         }
-      }
-   }
-}
+@import "addons/mediaqueries.scss";

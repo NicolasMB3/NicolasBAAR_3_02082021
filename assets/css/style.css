@@ -1,20 +1,49 @@
-@import "../css/normalize.css";
+@import url(c:\Users\Nicol\OneDrive\Bureau\NicolasBAAR_3_02082021\assets\sass\normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&family=Shrikhand&display=swap");
-body {
+/* Body & Footer */
+body, footer {
   scroll-behavior: smooth;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-body a {
+
+body a, footer a {
   text-decoration: none;
 }
-body header {
+
+body header, footer header {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   height: 4.5rem;
+}
+
+.footer-main {
+  padding: 1rem 2rem 2rem 2rem;
+  color: white;
+  background-color: #353535;
+}
+
+.footer-main .navigationLogo h3 {
+  font-size: 1.2rem;
+  font-family: 'Shrikhand', cursive;
+}
+
+.footer-main .navigationLogo .footer--grid .footer--grid__left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-main .navigationLogo .footer--grid .footer--grid__left .fas {
+  width: 1.5rem;
+}
+
+.footer-main .navigationLogo .footer--grid .footer--grid__left a {
+  font-weight: 300;
+  color: white;
+  margin: 0.3rem 0 0.3rem 0;
 }
 
 .container .location--container {
@@ -26,10 +55,12 @@ body header {
   background-color: #eaeaea;
   color: #7e7e7e;
 }
+
 .container .location--container .fa-map-marker-alt {
   position: relative;
   right: 1.3rem;
 }
+
 .container .main--location {
   display: flex;
   justify-content: center;
@@ -39,15 +70,18 @@ body header {
   background-color: #f6f6f6;
   padding: 1rem 2rem 3rem 2rem;
 }
+
 .container .main--location .title__location {
   width: 80%;
   margin-bottom: 0.5rem;
 }
+
 .container .main--location .subtitle__location {
   margin-top: 0rem;
   margin-bottom: 1.5rem;
   font-weight: 300;
 }
+
 .container .main--location .button__location {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   background: #ff79da;
@@ -60,15 +94,19 @@ body header {
   padding: 15px 22px;
   text-decoration: none;
 }
+
 .container .main--fonction {
   padding-top: 1rem;
 }
+
 .container .main--fonction h2 {
   padding-left: 1.5rem;
 }
+
 .container .main--fonction .grid--fonction {
   padding: 2rem 3rem 2rem 3rem;
 }
+
 .container .main--fonction .grid--fonction .grid--card {
   position: relative;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
@@ -83,6 +121,7 @@ body header {
   font-size: 16px;
   color: black;
 }
+
 .container .main--fonction .grid--fonction .grid--card .div--text {
   display: flex;
   justify-content: center;
@@ -96,9 +135,11 @@ body header {
   position: absolute;
   margin-left: -0.8rem;
 }
+
 .container .main--fonction .grid--fonction .grid--card .text__fonction {
   align-self: center;
 }
+
 .container .main--fonction .grid--fonction .grid--card .fas {
   color: #7e7e7e;
   font-size: 20px;
@@ -107,25 +148,31 @@ body header {
   justify-content: center;
   align-items: center;
 }
+
 .container .main--fonction .grid--fonction .grid--card:hover {
   background-color: #f5edff;
 }
+
 .container .main--fonction .grid--fonction .grid--card:hover .fas {
   color: #9356DC;
 }
+
 .container .cards--container {
   padding: 2rem 0 2rem 0;
   background-color: #f6f6f6;
 }
+
 .container .cards--container h2 {
   padding-left: 1.5rem;
 }
+
 .container .cards--container .cards-grid {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+
 .container .cards--container .cards-grid .cards--template {
   border-radius: 1rem;
   margin: 0.7rem 1rem 0.7rem 1rem;
@@ -133,6 +180,7 @@ body header {
   background-color: white;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
 }
+
 .container .cards--container .cards-grid .cards--template .cards--news__grid {
   display: flex;
   justify-content: center;
@@ -146,10 +194,12 @@ body header {
   width: 5.5rem;
   height: 2.2rem;
 }
+
 .container .cards--container .cards-grid .cards--template .cards--news__grid p {
   margin: 0;
   color: #008766;
 }
+
 .container .cards--container .cards-grid .cards--template img {
   object-fit: cover;
   object-position: center;
@@ -157,24 +207,28 @@ body header {
   height: 11rem;
   width: 100%;
 }
+
 .container .cards--container .cards-grid .cards--template .cards--template__grid {
   display: grid;
   padding: 1rem 1rem 1rem 1rem;
   grid-auto-flow: row dense;
   grid-template-columns: 80% auto;
-  grid-template-areas: "div1 div3" "div2 div3";
+  grid-template-areas: "div1 div3" "div2 div3";
 }
+
 .container .cards--container .cards-grid .cards--template .cards--template__grid h3 {
   grid-area: div1;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: black;
 }
+
 .container .cards--container .cards-grid .cards--template .cards--template__grid p {
   grid-area: div2;
   margin: 0;
   color: black;
 }
+
 .container .cards--container .cards-grid .cards--template .cards--template__grid i {
   grid-area: div3;
   justify-self: center;
@@ -187,27 +241,32 @@ body header {
   color: white;
   background-color: #353535;
 }
+
 .footer-main .navigationLogo h3 {
   font-size: 1.2rem;
-  font-family: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
 }
+
 .footer-main .navigationLogo .footer--grid .footer--grid__left {
   display: flex;
   align-items: center;
 }
+
 .footer-main .navigationLogo .footer--grid .footer--grid__left .fas {
   width: 1.5rem;
 }
+
 .footer-main .navigationLogo .footer--grid .footer--grid__left p {
   font-weight: 300;
+  color: white;
   margin: 0.3rem 0 0.3rem 0;
 }
 
+/* @media */
 @media (min-width: 768px) {
   .choose--container {
     margin: 0 2rem 0 2rem;
   }
-
   .container .main--fonction {
     padding: 1rem 7% 1rem 7%;
   }
@@ -222,7 +281,7 @@ body header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 2rem;
-    grid-template-areas: "grid__one grid__two" "grid__third grid__third";
+    grid-template-areas: "grid__one grid__two" "grid__third grid__third";
   }
   .container .main--fonction .grid--fonction .grid__one {
     grid-area: grid__one;
@@ -272,7 +331,6 @@ body header {
     grid-template-rows: 1fr;
     margin: 0 10% 3rem 10%;
   }
-
   .footer-main {
     display: flex;
     justify-content: center;
@@ -292,12 +350,13 @@ body header {
     align-items: center;
   }
   .footer-main .navigationLogo .footer--grid .grid--left {
-    grid-area: 1/1/2/2;
+    grid-area: 1 / 1 / 2 / 2;
   }
   .footer-main .navigationLogo .footer--grid .grid--right {
-    grid-area: 1/2/2/3;
+    grid-area: 1 / 2 / 2 / 3;
   }
 }
+
 @media (min-width: 1200px) {
   .container .main--fonction .grid--fonction {
     grid-auto-flow: row dense;
@@ -309,5 +368,4 @@ body header {
     align-items: center;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

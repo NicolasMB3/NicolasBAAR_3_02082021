@@ -1,0 +1,19 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$third: #99E2D0;
+$grey: #7e7e7e;
+$dark: rgb(0, 0, 0);
+$light: rgb(255, 255, 255);
+
+@mixin box-shadow($value) {
+   box-shadow: 0 0px $value rgba(0, 0, 0, 0.2);
+}
+@mixin box-gradiant {
+   background: rgb(255,121,218);
+   background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 100%);
+}
+@mixin display-flex{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

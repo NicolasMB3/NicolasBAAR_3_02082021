@@ -25,13 +25,14 @@ Le site OhMyFood est un projet produit par Nicolas pour la formation de dévelop
 
 Contenance du site :
 * Création et modification d'enseignes de restaurants sur Paris,
-* Création et modification d'annonces,
-* Création de plusieurs pages qui permet aux restaurants d'avoir leurs menus.
+* Création de plusieurs pages qui permet aux restaurants d'avoir leurs menus,
+* Création et modification d'annonces.
 
 ### Développer avec 
 Liste de tous les languages utilisés pour la création du site :
 * [HTML](https://developer.mozilla.org/fr/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/fr/docs/Web/css)
+* [Sass](https://sass-lang.com/)
 
 ## Contacts
 

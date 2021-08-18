@@ -1,0 +1,117 @@
+@import "variables.scss";
+
+/* @media */
+
+@media (min-width: 768px) {  
+   .choose--container {
+      margin: 0 2rem 0 2rem;
+   }
+   .container {
+      .main--fonction {
+         padding: 1rem 7% 1rem 7%;
+         h2 {
+            text-align: center;
+            font-size: 30px;
+         }
+         p {
+            text-align: center;
+         }
+         .grid--fonction {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 0 2rem; 
+            grid-template-areas: 
+              "grid__one grid__two"
+              "grid__third grid__third"; 
+            .grid__one { 
+               grid-area: grid__one; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               display: grid;
+               grid-template-columns: auto auto;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+            .grid__two { 
+               grid-area: grid__two; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+            .grid__third { 
+               grid-area: grid__third; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+         }
+      }
+      .cards--container {
+         h2 {
+            text-align: center;
+            font-size: 30px;
+         }
+         .cards-grid {
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            margin: 0 10% 3rem 10%;
+         }
+      }
+   }
+   .footer-main {
+      @include display-flex;
+      .navigationLogo {
+         h3 {
+            text-align: center;
+         }
+         width: 30rem;
+         .footer--grid {
+            display: grid;
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
+            justify-items: center; 
+            align-items: center; 
+            .grid--left {
+               grid-area: 1 / 1 / 2 / 2;
+            }
+            .grid--right {
+               grid-area: 1 / 2 / 2 / 3;
+            }
+         }
+      }
+   }
+}
+@media (min-width: 1200px) {  
+   .container {
+      .main--fonction {
+         .grid--fonction {
+            grid-auto-flow: row dense; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 4.5rem;
+            grid-template-areas: 
+              "grid__one grid__two grid__third"; 
+            justify-items: center; 
+            align-items: center; 
+         }
+      }
+   }
+}
