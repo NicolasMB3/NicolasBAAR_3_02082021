@@ -321,6 +321,7 @@ body header .navigationLogoBack a {
   align-items: center;
   border-radius: 20px;
   padding: 1rem 1rem 1rem 1rem;
+  height: auto;
 }
 
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-one {
@@ -333,6 +334,9 @@ body header .navigationLogoBack a {
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-one p {
   margin-top: 0;
   margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-two {
@@ -344,6 +348,9 @@ body header .navigationLogoBack a {
   margin: 0;
   font-weight: 300;
   font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-thrid {
@@ -372,6 +379,56 @@ body header .navigationLogoBack a {
 }
 
 /* @media */
+@media (min-width: 1200px) {
+  .container-francaise {
+    margin: 0 15rem 0 15rem;
+    position: relative;
+    margin-top: -10rem;
+    overflow-wrap: break-word;
+  }
+  .container-francaise .text-title h1 {
+    margin-left: 2rem;
+  }
+  .container-francaise .text-title i {
+    margin-right: 2rem;
+  }
+  .container-francaise .menu-francaise {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 2rem;
+    grid-row-gap: 0px;
+    padding: 0 2rem 0 2rem;
+  }
+  .container-francaise .menu-francaise .menu-desk-one {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .container-francaise .menu-francaise .menu-desk-two {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .container-francaise .menu-francaise .menu-desk-third {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  .container-francaise .menu-francaise .button__plat {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  .container-francaise .menu-francaise .miam-menu {
+    height: 5rem;
+  }
+  .container-francaise .menu-francaise a {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .container .main--fonction .grid--fonction {
+    grid-auto-flow: row dense;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.5rem;
+    grid-template-areas: "grid__one grid__two grid__third";
+    justify-items: center;
+    align-items: center;
+  }
+}
+
 @media (min-width: 768px) {
   body .testtest {
     max-height: 25rem;
@@ -476,53 +533,36 @@ body header .navigationLogoBack a {
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 350px) {
   .container-francaise {
-    margin: 0 15rem 0 15rem;
-    position: relative;
-    margin-top: -10rem;
-    overflow-wrap: break-word;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
   }
-  .container-francaise .text-title h1 {
-    margin-left: 2rem;
-  }
-  .container-francaise .text-title i {
-    margin-right: 2rem;
+  .container-francaise .button__plat {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
   }
   .container-francaise .menu-francaise {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 2rem;
-    grid-row-gap: 0px;
-    padding: 0 2rem 0 2rem;
+    display: block;
   }
-  .container-francaise .menu-francaise .menu-desk-one {
+  .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-one {
+    width: 70%;
     grid-area: 1 / 1 / 2 / 2;
   }
-  .container-francaise .menu-francaise .menu-desk-two {
-    grid-area: 1 / 2 / 2 / 3;
+  .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-two {
+    width: 70%;
+    grid-area: 2 / 1 / 3 / 2;
   }
-  .container-francaise .menu-francaise .menu-desk-third {
-    grid-area: 2 / 1 / 3 / 3;
-  }
-  .container-francaise .menu-francaise .button__plat {
-    grid-area: 3 / 1 / 4 / 3;
-  }
-  .container-francaise .menu-francaise .miam-menu {
-    height: 5rem;
-  }
-  .container-francaise .menu-francaise a {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  .container .main--fonction .grid--fonction {
-    grid-auto-flow: row dense;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4.5rem;
-    grid-template-areas: "grid__one grid__two grid__third";
-    justify-items: center;
-    align-items: center;
+  .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-thrid {
+    width: 70%;
+    margin-bottom: 0;
+    grid-area: 3 / 1 / 4 / 2;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

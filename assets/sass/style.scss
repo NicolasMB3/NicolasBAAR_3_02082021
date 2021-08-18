@@ -259,6 +259,7 @@ body {
                   align-items: center; 
                   border-radius: 20px;
                   padding: 1rem 1rem 1rem 1rem;
+                  height: auto;
                   .miam-one {
                      font-weight: bold;
                      font-size: 20px;
@@ -267,6 +268,9 @@ body {
                      p {
                         margin-top: 0;
                         margin-bottom: 0;
+                        overflow:hidden; 
+                        white-space:nowrap; 
+                        text-overflow: ellipsis;
                      }
                   }
                   .miam-two {
@@ -276,6 +280,9 @@ body {
                         margin: 0;
                         font-weight: 300;
                         font-size: 14px;
+                        overflow:hidden; 
+                        white-space:nowrap; 
+                        text-overflow: ellipsis;
                      }
                   }
                   .miam-thrid {
