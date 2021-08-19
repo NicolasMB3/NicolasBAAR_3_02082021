@@ -21,6 +21,7 @@ body {
       .navigationLogoBack {
          @include display-flex;
          a {
+            color: $dark;
             position: absolute;
             left: 5%;
          }
@@ -194,6 +195,7 @@ body {
                }
                i {
                   grid-area: div3; 
+                  color: $dark;
                   justify-self: center; 
                   align-self: center; 
                   font-size: 32px;

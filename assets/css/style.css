@@ -31,6 +31,7 @@ body header .navigationLogoBack {
 }
 
 body header .navigationLogoBack a {
+  color: black;
   position: absolute;
   left: 5%;
 }
@@ -247,6 +248,7 @@ body header .navigationLogoBack a {
 
 .container .cards--container .cards-grid .cards--template .cards--template__grid i {
   grid-area: div3;
+  color: black;
   justify-self: center;
   align-self: center;
   font-size: 32px;
