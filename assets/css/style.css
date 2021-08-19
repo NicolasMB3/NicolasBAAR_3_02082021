@@ -270,6 +270,10 @@ body header .navigationLogoBack a {
   font-family: 'Shrikhand', cursive;
 }
 
+.container-francaise .text-title h1 {
+  width: 85%;
+}
+
 .container-francaise .text-title i {
   font-size: 30px;
   margin-right: 1rem;
