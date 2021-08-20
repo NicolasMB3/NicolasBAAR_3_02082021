@@ -1,5 +1,37 @@
 @import "assets/css/normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shrikhand&display=swap");
+.heart__animation1 {
+  position: absolute;
+  right: 5%;
+  transition-duration: 500ms;
+}
+
+.heart__animation2 {
+  position: absolute;
+  right: 5%;
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+.heart-animation:hover > .heart__animation1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-duration: 500ms;
+  transform: scale(1.2);
+}
+
+.heart-animation:hover > .heart__animation2 {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-duration: 500ms;
+  transform: scale(1.2);
+}
+
 body {
   scroll-behavior: smooth;
   margin: 0;
@@ -333,40 +365,6 @@ body header .navigationLogoBack a {
   margin-bottom: 4rem;
 }
 
-/* Animation */
-.heart__animation1 {
-  position: absolute;
-  right: 5%;
-  transition-duration: 500ms;
-}
-
-.heart__animation2 {
-  position: absolute;
-  right: 5%;
-  opacity: 0;
-  transition-duration: 500ms;
-}
-
-.heart-animation:hover > .heart__animation1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition-duration: 500ms;
-  transform: scale(1.2);
-}
-
-.heart-animation:hover > .heart__animation2 {
-  opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition-duration: 500ms;
-  transform: scale(1.2);
-}
-
-/* Animation */
 @media (min-width: 1200px) {
   .container-francaise {
     margin: 0 15rem 0 15rem;

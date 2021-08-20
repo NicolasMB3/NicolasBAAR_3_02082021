@@ -1,0 +1,28 @@
+@use '../components' as *;
+
+body {
+   img, video {
+      height: auto;
+      max-width: 100%;
+   }
+   scroll-behavior: smooth;
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+   a {
+      text-decoration: none; 
+   }
+   header {
+      @include box-shadow(20px);
+      @include display-flex;
+      position: relative;
+      height: 4.5rem;
+      .navigationLogoBack {
+         @include display-flex;
+         a {
+            color: $dark;
+            position: absolute;
+            left: 5%;
+         }
+      }
+   }
+}
