@@ -63,28 +63,6 @@ body header .navigationLogoBack a {
   left: 5%;
 }
 
-.footer-main {
-  padding: 1rem 2rem 2rem 2rem;
-  color: white;
-  background-color: #353535;
-}
-.footer-main .navigationLogo h3 {
-  font-size: 1.2rem;
-  font-family: "Shrikhand", cursive;
-}
-.footer-main .navigationLogo .footer--grid .footer--grid__left {
-  display: flex;
-  align-items: center;
-}
-.footer-main .navigationLogo .footer--grid .footer--grid__left .fas {
-  width: 1.5rem;
-}
-.footer-main .navigationLogo .footer--grid .footer--grid__left a {
-  font-weight: 300;
-  color: white;
-  margin: 0.3rem 0 0.3rem 0;
-}
-
 .container .location--container {
   display: flex;
   justify-content: center;
@@ -363,6 +341,28 @@ body header .navigationLogoBack a {
   padding: 15px 35px;
   text-decoration: none;
   margin-bottom: 4rem;
+}
+
+.footer-main {
+  padding: 1rem 2rem 2rem 2rem;
+  color: white;
+  background-color: #353535;
+}
+.footer-main .navigationLogo h3 {
+  font-size: 1.2rem;
+  font-family: "Shrikhand", cursive;
+}
+.footer-main .navigationLogo .footer--grid .footer--grid__left {
+  display: flex;
+  align-items: center;
+}
+.footer-main .navigationLogo .footer--grid .footer--grid__left .fas {
+  width: 1.5rem;
+}
+.footer-main .navigationLogo .footer--grid .footer--grid__left a {
+  font-weight: 300;
+  color: white;
+  margin: 0.3rem 0 0.3rem 0;
 }
 
 @media (min-width: 1200px) {
