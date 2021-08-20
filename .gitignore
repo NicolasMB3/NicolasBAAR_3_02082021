@@ -1,6 +1,6 @@
 
 *.bat
-dart-sass/src/dart.exe
-dart-sass/src/LICENSE
-dart-sass/src/sass.snapshot
 assets/css/style.css.map
+node_modules/*
+package-lock.json
+package.json

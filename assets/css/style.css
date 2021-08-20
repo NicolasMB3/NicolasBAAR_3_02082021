@@ -1,20 +1,17 @@
-@import url(c:\Users\Nicol\OneDrive\Bureau\NicolasBAAR_3_02082021\assets\sass\normalize.css);
+@import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shrikhand&display=swap");
 body {
   scroll-behavior: smooth;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
 body img, body video {
   height: auto;
   max-width: 100%;
 }
-
 body a {
   text-decoration: none;
 }
-
 body header {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -23,13 +20,11 @@ body header {
   position: relative;
   height: 4.5rem;
 }
-
 body header .navigationLogoBack {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 body header .navigationLogoBack a {
   color: black;
   position: absolute;
@@ -41,21 +36,17 @@ body header .navigationLogoBack a {
   color: white;
   background-color: #353535;
 }
-
 .footer-main .navigationLogo h3 {
   font-size: 1.2rem;
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
-
 .footer-main .navigationLogo .footer--grid .footer--grid__left {
   display: flex;
   align-items: center;
 }
-
 .footer-main .navigationLogo .footer--grid .footer--grid__left .fas {
   width: 1.5rem;
 }
-
 .footer-main .navigationLogo .footer--grid .footer--grid__left a {
   font-weight: 300;
   color: white;
@@ -71,12 +62,10 @@ body header .navigationLogoBack a {
   background-color: #eaeaea;
   color: #7e7e7e;
 }
-
 .container .location--container .fa-map-marker-alt {
   position: relative;
   right: 1.3rem;
 }
-
 .container .main--location {
   display: flex;
   justify-content: center;
@@ -86,18 +75,15 @@ body header .navigationLogoBack a {
   background-color: #f6f6f6;
   padding: 1rem 2rem 3rem 2rem;
 }
-
 .container .main--location .title__location {
   width: 80%;
   margin-bottom: 0.5rem;
 }
-
 .container .main--location .subtitle__location {
   margin-top: 0rem;
   margin-bottom: 1.5rem;
   font-weight: 300;
 }
-
 .container .main--location .button__location {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   background: #ff79da;
@@ -111,19 +97,15 @@ body header .navigationLogoBack a {
   padding: 15px 35px;
   text-decoration: none;
 }
-
 .container .main--fonction {
   padding-top: 1rem;
 }
-
 .container .main--fonction h2 {
   padding-left: 1.5rem;
 }
-
 .container .main--fonction .grid--fonction {
   padding: 2rem 3rem 2rem 3rem;
 }
-
 .container .main--fonction .grid--fonction .grid--card {
   position: relative;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
@@ -138,7 +120,6 @@ body header .navigationLogoBack a {
   font-size: 16px;
   color: black;
 }
-
 .container .main--fonction .grid--fonction .grid--card .div--text {
   display: flex;
   justify-content: center;
@@ -152,11 +133,9 @@ body header .navigationLogoBack a {
   position: absolute;
   margin-left: -0.8rem;
 }
-
 .container .main--fonction .grid--fonction .grid--card .text__fonction {
   align-self: center;
 }
-
 .container .main--fonction .grid--fonction .grid--card .fas, .container .main--fonction .grid--fonction .grid--card .far {
   color: #7e7e7e;
   font-size: 20px;
@@ -165,31 +144,25 @@ body header .navigationLogoBack a {
   justify-content: center;
   align-items: center;
 }
-
 .container .main--fonction .grid--fonction .grid--card:hover {
   background-color: #f5edff;
 }
-
 .container .main--fonction .grid--fonction .grid--card:hover .fas {
   color: #9356DC;
 }
-
 .container .cards--container {
   padding: 2rem 0 2rem 0;
   background-color: #f6f6f6;
 }
-
 .container .cards--container h2 {
   padding-left: 1.5rem;
 }
-
 .container .cards--container .cards-grid {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-
 .container .cards--container .cards-grid .cards--template {
   border-radius: 1rem;
   margin: 0.7rem 1rem 0.7rem 1rem;
@@ -197,7 +170,6 @@ body header .navigationLogoBack a {
   background-color: white;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
 }
-
 .container .cards--container .cards-grid .cards--template .cards--news__grid {
   display: flex;
   justify-content: center;
@@ -211,12 +183,10 @@ body header .navigationLogoBack a {
   width: 5.5rem;
   height: 2.2rem;
 }
-
 .container .cards--container .cards-grid .cards--template .cards--news__grid p {
   margin: 0;
   color: #008766;
 }
-
 .container .cards--container .cards-grid .cards--template img {
   object-fit: cover;
   object-position: center;
@@ -224,31 +194,26 @@ body header .navigationLogoBack a {
   height: 11rem;
   width: 100%;
 }
-
 .container .cards--container .cards-grid .cards--template .cards--template__grid {
   display: grid;
   padding: 1rem 1rem 1rem 1rem;
   grid-auto-flow: row dense;
   grid-template-columns: 80% auto;
-  grid-template-areas: "div1 div3" "div2 div3";
+  grid-template-areas: "div1 div3" "div2 div3";
 }
-
 .container .cards--container .cards-grid .cards--template .cards--template__grid h3 {
   grid-area: div1;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: black;
 }
-
 .container .cards--container .cards-grid .cards--template .cards--template__grid p {
   grid-area: div2;
   margin: 0;
   color: black;
 }
-
 .container .cards--container .cards-grid .cards--template .cards--template__grid i {
   grid-area: div3;
-  color: black;
   justify-self: center;
   align-self: center;
   font-size: 32px;
@@ -262,23 +227,19 @@ body header .navigationLogoBack a {
   padding: 0.5rem 1rem 2rem 1rem;
   z-index: 1;
 }
-
 .container-francaise .text-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
-
 .container-francaise .text-title h1 {
   width: 85%;
 }
-
 .container-francaise .text-title i {
   font-size: 30px;
   margin-right: 1rem;
 }
-
 .container-francaise .menu-francaise {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -286,25 +247,21 @@ body header .navigationLogoBack a {
   grid-row-gap: 5px;
   justify-items: center;
 }
-
 .container-francaise .menu-francaise .menu-one {
   height: auto;
   width: 100%;
   margin-bottom: 1.7rem;
 }
-
 .container-francaise .menu-francaise .menu-one p {
   font-size: 18px;
   margin-bottom: 0.5rem;
 }
-
 .container-francaise .menu-francaise .menu-one .green-bar {
   width: 50px;
   background-color: #99e2d0;
   height: 0.25rem;
   margin-bottom: 1.3rem;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise {
   display: grid;
   grid-template-columns: 1fr;
@@ -312,12 +269,10 @@ body header .navigationLogoBack a {
   grid-column-gap: 11px;
   grid-row-gap: 20px;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one {
   height: auto;
   width: 100%;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu {
   display: grid;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
@@ -329,14 +284,12 @@ body header .navigationLogoBack a {
   padding: 1rem 1rem 1rem 1rem;
   height: auto;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-one {
   font-weight: bold;
   font-size: 20px;
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1/1/2/2;
   width: 100%;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-one p {
   margin-top: 0;
   margin-bottom: 0;
@@ -344,12 +297,10 @@ body header .navigationLogoBack a {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-two {
-  grid-area: 2 / 1 / 3 / 2;
+  grid-area: 2/1/3/2;
   width: 100%;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-two p {
   margin: 0;
   font-weight: 300;
@@ -358,9 +309,8 @@ body header .navigationLogoBack a {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-thrid {
-  grid-area: 1 / 2 / 3 / 3;
+  grid-area: 1/2/3/3;
   width: auto;
   position: relative;
   margin-bottom: -0.8rem;
@@ -368,7 +318,6 @@ body header .navigationLogoBack a {
   justify-self: center;
   align-self: center;
 }
-
 .container-francaise .button__plat {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   background: #ff79da;
@@ -441,23 +390,24 @@ body header .navigationLogoBack a {
     padding: 0 2rem 0 2rem;
   }
   .container-francaise .menu-francaise .menu-desk-one {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1/1/2/2;
   }
   .container-francaise .menu-francaise .menu-desk-two {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1/2/2/3;
   }
   .container-francaise .menu-francaise .menu-desk-third {
-    grid-area: 2 / 1 / 3 / 3;
+    grid-area: 2/1/3/3;
   }
   .container-francaise .menu-francaise .button__plat {
-    grid-area: 3 / 1 / 4 / 3;
+    grid-area: 3/1/4/3;
   }
   .container-francaise .menu-francaise .miam-menu {
     height: 5rem;
   }
   .container-francaise .menu-francaise a {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2/2/3/3;
   }
+
   .container .main--fonction .grid--fonction {
     grid-auto-flow: row dense;
     grid-auto-columns: 1fr;
@@ -468,21 +418,23 @@ body header .navigationLogoBack a {
     align-items: center;
   }
 }
-
 @media (min-width: 768px) {
   body .testtest {
     max-height: 25rem;
     width: 100%;
     object-fit: cover;
   }
+
   .container-francaise {
     margin: 0 5rem 0 5rem;
     position: relative;
     margin-top: -8rem;
   }
+
   .choose--container {
     margin: 0 2rem 0 2rem;
   }
+
   .container .main--fonction {
     padding: 1rem 7% 1rem 7%;
   }
@@ -497,7 +449,7 @@ body header .navigationLogoBack a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 2rem;
-    grid-template-areas: "grid__one grid__two" "grid__third grid__third";
+    grid-template-areas: "grid__one grid__two" "grid__third grid__third";
   }
   .container .main--fonction .grid--fonction .grid__one {
     grid-area: grid__one;
@@ -547,6 +499,7 @@ body header .navigationLogoBack a {
     grid-template-rows: 1fr;
     margin: 0 10% 3rem 10%;
   }
+
   .footer-main {
     display: flex;
     justify-content: center;
@@ -566,13 +519,12 @@ body header .navigationLogoBack a {
     align-items: center;
   }
   .footer-main .navigationLogo .footer--grid .grid--left {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1/1/2/2;
   }
   .footer-main .navigationLogo .footer--grid .grid--right {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1/2/2/3;
   }
 }
-
 @media (max-width: 350px) {
   .container-francaise {
     margin-top: -4rem;
@@ -593,17 +545,18 @@ body header .navigationLogoBack a {
   }
   .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-one {
     width: 70%;
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1/1/2/2;
   }
   .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-two {
     width: 70%;
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2/1/3/2;
   }
   .container-francaise .menu-francaise .menu-one .plat-francaise .plat-one .miam-menu .miam-thrid {
     width: 70%;
     margin-bottom: 0;
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 3/1/4/2;
     text-align: center;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
