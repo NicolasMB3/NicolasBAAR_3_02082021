@@ -1,5 +1,5 @@
-@import "normalize.css";
-@import "addons/variables.scss";
+@use 'components/variables';
+@import "assets/css/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shrikhand&display=swap');
 
 body {
@@ -14,14 +14,14 @@ body {
       text-decoration: none; 
    }
    header {
-      @include box-shadow(20px);
-      @include display-flex;
+      @include variables.box-shadow(20px);
+      @include variables.display-flex;
       position: relative;
       height: 4.5rem;
       .navigationLogoBack {
-         @include display-flex;
+         @include variables.display-flex;
          a {
-            color: $dark;
+            color: variables.$dark;
             position: absolute;
             left: 5%;
          }
@@ -31,7 +31,7 @@ body {
 
 .footer-main {
    padding: 1rem 2rem 2rem 2rem;
-   color: $light;
+   color: variables.$light;
    background-color: #353535;
    .navigationLogo {
       h3 {
@@ -47,7 +47,7 @@ body {
             }
             a {
                font-weight: 300;
-               color: $light;
+               color: variables.$light;
                margin: 0.3rem 0 0.3rem 0;
             }
          }
@@ -57,18 +57,18 @@ body {
 
 .container {
    .location--container {
-      @include display-flex;
+      @include variables.display-flex;
       height: 4rem;
       font-size: 18px;
       background-color: #eaeaea;
-      color: $grey;
+      color: variables.$grey;
          .fa-map-marker-alt {
             position: relative;
             right: 1.3rem;
          }
    }
    .main--location {
-      @include display-flex;
+      @include variables.display-flex;
       flex-direction: column;
       text-align: center;
       background-color: #f6f6f6;
@@ -83,7 +83,7 @@ body {
             font-weight: 300;
          }
          .button__location {
-            @include button-gradiant;
+            @include variables.button-gradiant;
          }
    }
    .main--fonction {
@@ -95,7 +95,7 @@ body {
          padding: 2rem 3rem 2rem 3rem;
          .grid--card {
             position: relative;
-            @include box-shadow(20px);
+            @include variables.box-shadow(20px);
             display: grid;
             grid-template-columns: 27% auto;
             align-self: center;
@@ -105,15 +105,15 @@ body {
             border-radius: 25px;
             font-weight: 700;
             font-size: 16px;
-            color: $dark;
+            color: variables.$dark;
                .div--text {
-                  @include display-flex;
+                  @include variables.display-flex;
                   align-self: center;
                   height: 2rem;
                   width: 2rem;
                   border-radius: 20px;
-                  background-color: $primary;
-                  color: $light;
+                  background-color: variables.$primary;
+                  color: variables.$light;
                   position: absolute;
                   margin-left: -0.8rem;
                }
@@ -121,15 +121,15 @@ body {
                   align-self: center;
                }
                .fas, .far {
-                  color: $grey;
+                  color: variables.$grey;
                   font-size: 20px;
                   padding-left: 1rem;
-                  @include display-flex;
+                  @include variables.display-flex;
                }
                &:hover {
                   background-color: #f5edff;
                   .fas {
-                     color: $primary;
+                     color: variables.$primary;
                   }
                }
          }
@@ -150,10 +150,10 @@ body {
             border-radius: 1rem;
             margin: 0.7rem 1rem 0.7rem 1rem;
             position: relative;
-            background-color: $light;
-            @include box-shadow(20px);
+            background-color: variables.$light;
+            @include variables.box-shadow(20px);
             .cards--news__grid {
-               @include display-flex;
+               @include variables.display-flex;
                position: absolute;
                right: 5%;
                top: 5%;
@@ -186,12 +186,12 @@ body {
                   grid-area: div1;
                   margin-top: 0;
                   margin-bottom: 0.5rem;
-                  color: $dark;
+                  color: variables.$dark;
                }
                p {
                   grid-area: div2;
                   margin: 0;
-                  color: $dark;
+                  color: variables.$dark;
                }
                i {
                   grid-area: div3; 
@@ -256,7 +256,7 @@ body {
                width: 100%;
                .miam-menu {
                   display: grid;
-                  @include box-shadow(20px);
+                  @include variables.box-shadow(20px);
                   grid-template-columns: 75% auto;
                   grid-template-rows: 1fr 1fr; 
                   justify-items: center; 
@@ -304,7 +304,7 @@ body {
       }
    }
    .button__plat {
-      @include button-gradiant;
+      @include variables.button-gradiant;
       margin-bottom: 4rem;
    }
 }
@@ -345,4 +345,208 @@ body {
 
 /* Animation */
 
-@import "addons/mediaqueries.scss";
+@media (min-width: 1200px) {  
+   .container-francaise {
+      margin: 0 15rem 0 15rem;
+      position: relative;
+      margin-top: -10rem;
+      overflow-wrap: break-word;
+      .text-title {
+         h1 {
+            margin-left: 2rem;
+         }
+         i {
+            margin-right: 2rem;
+         }
+      }
+      .menu-francaise {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(3, auto);
+         grid-column-gap: 2rem;
+         grid-row-gap: 0px;
+         padding: 0 2rem 0 2rem;
+         .menu-desk-one { 
+            grid-area: 1 / 1 / 2 / 2; 
+         }
+         .menu-desk-two { 
+            grid-area: 1 / 2 / 2 / 3; 
+         }
+         .menu-desk-third { 
+            grid-area: 2 / 1 / 3 / 3; 
+         }
+         .button__plat { 
+            grid-area: 3 / 1 / 4 / 3; 
+         }
+         .miam-menu {
+            height: 5rem;
+         }
+         a {
+            grid-area: 2 / 2 / 3 / 3;
+         }
+      }
+   }
+   .container {
+      .main--fonction {
+         .grid--fonction {
+            grid-auto-flow: row dense; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 4.5rem;
+            grid-template-areas: 
+              "grid__one grid__two grid__third"; 
+            justify-items: center; 
+            align-items: center; 
+         }
+      }
+   }
+}
+@media (min-width: 768px) {  
+   body {
+      .testtest {
+         max-height: 25rem;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+   .container-francaise {
+      margin: 0 5rem 0 5rem;
+      position: relative;
+      margin-top: -8rem;
+   }
+   .choose--container {
+      margin: 0 2rem 0 2rem;
+   }
+   .container {
+      .main--fonction {
+         padding: 1rem 7% 1rem 7%;
+         h2 {
+            text-align: center;
+            font-size: 30px;
+         }
+         p {
+            text-align: center;
+         }
+         .grid--fonction {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 0 2rem; 
+            grid-template-areas: 
+              "grid__one grid__two"
+              "grid__third grid__third"; 
+            .grid__one { 
+               grid-area: grid__one; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               display: grid;
+               grid-template-columns: auto auto;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+            .grid__two { 
+               grid-area: grid__two; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+            .grid__third { 
+               grid-area: grid__third; 
+               grid-template-columns: auto auto; 
+               width: 100%;
+               i {
+                  justify-self: end; 
+                  padding-right: 1rem;
+               }
+               p {
+                  justify-self: start; 
+               }
+            }
+         }
+      }
+      .cards--container {
+         h2 {
+            text-align: center;
+            font-size: 30px;
+         }
+         .cards-grid {
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            margin: 0 10% 3rem 10%;
+         }
+      }
+   }
+   .footer-main {
+      @include variables.display-flex;
+      .navigationLogo {
+         h3 {
+            text-align: center;
+         }
+         width: 30rem;
+         .footer--grid {
+            display: grid;
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr; 
+            justify-items: center; 
+            align-items: center; 
+            .grid--left {
+               grid-area: 1 / 1 / 2 / 2;
+            }
+            .grid--right {
+               grid-area: 1 / 2 / 2 / 3;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 350px) {  
+   .container-francaise {
+      margin-top: -4rem;
+      padding :0.5rem 0.5rem 2rem 0.5rem;
+      .button__plat {
+         display: flex;
+         justify-content: center;
+         margin-bottom: 0.5rem;
+      }
+      .menu-francaise {
+         display: block;
+         .menu-one { 
+            .plat-francaise {
+               .plat-one {
+                  .miam-menu {
+                     padding: 1rem 0.2rem 1rem 0.2rem;
+                     grid-template-columns: 1fr; 
+                     grid-template-rows: auto auto auto; 
+                     .miam-one {
+                        width: 70%;
+                        grid-area: 1 / 1 / 2 / 2;
+                     }
+                     .miam-two {
+                        width: 70%;
+                        grid-area: 2 / 1 / 3 / 2;
+                     }
+                     .miam-thrid {
+                        width: 70%;
+                        margin-bottom: 0;
+                        grid-area: 3 / 1 / 4 / 2;
+                        text-align: center;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

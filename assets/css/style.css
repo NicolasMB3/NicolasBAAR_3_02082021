@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import "assets/css/normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shrikhand&display=swap");
 body {
   scroll-behavior: smooth;
@@ -367,7 +367,6 @@ body header .navigationLogoBack a {
 }
 
 /* Animation */
-/* @media */
 @media (min-width: 1200px) {
   .container-francaise {
     margin: 0 15rem 0 15rem;

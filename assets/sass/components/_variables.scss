@@ -12,12 +12,12 @@ $light: rgb(255, 255, 255);
    background: rgb(255,121,218);
    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 100%);
 }
-@mixin display-flex{
+@mixin display-flex {
    display: flex;
    justify-content: center;
    align-items: center;
 }
-@mixin button-gradiant{
+@mixin button-gradiant {
    @include box-shadow(20px);
    @include box-gradiant;
    border-radius: 30px;
