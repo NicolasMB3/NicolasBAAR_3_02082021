@@ -44,6 +44,10 @@ body img, body video {
 body a {
   text-decoration: none;
 }
+body .heart-animation {
+  width: auto;
+  height: 1.8rem;
+}
 body header {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   display: flex;

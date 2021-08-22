@@ -11,6 +11,10 @@ body {
    a {
       text-decoration: none; 
    }
+   .heart-animation {
+      width: auto;
+      height: 1.8rem;
+   }
    header {
       @include box-shadow(20px);
       @include display-flex;
