@@ -460,7 +460,7 @@ body header .navigationLogoBack a {
 }
 .container-francaise .menu-francaise .menu-one .plat-francaise input {
   appearance: none;
-  width: 92%;
+  width: 100%;
   height: 5rem;
   border-radius: 1rem;
   position: absolute;
@@ -521,9 +521,6 @@ body header .navigationLogoBack a {
     grid-column-gap: 2rem;
     grid-row-gap: 0px;
     padding: 0 2rem 0 2rem;
-  }
-  .container-francaise .menu-francaise .menu-one .plat-francaise input {
-    width: 47%;
   }
   .container-francaise .menu-francaise .menu-desk-one {
     grid-area: 1/1/2/2;
