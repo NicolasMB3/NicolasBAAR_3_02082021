@@ -1,0 +1,140 @@
+@use '../utils' as *;
+
+.container-francaise {
+   background-color: #f6f6f6;
+   border-radius: 35px 35px 0 0;
+   position: relative;
+   margin-top: -10rem;
+   padding: 0.5rem 1rem 2rem 1rem;
+   z-index: 1;
+   .text-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Shrikhand', cursive;
+      h1 {
+         width: 85%;
+      }
+      i {
+         font-size: 30px;
+         margin-right: 1rem;
+      }
+   }
+   .button__plat {
+      @include button-gradiant;
+      &:hover {
+         @include button-gradiant2;
+      }
+      margin-bottom: 4rem;
+   }
+   .menu-francaise {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      grid-column-gap: 11px;
+      grid-row-gap: 5px;
+      justify-items: center; 
+      .menu-one { 
+         width: 100%;
+         margin-bottom: 1.7rem;
+         .green-bar {
+            width: 50px;
+            background-color: #99e2d0;
+            height: 0.25rem;
+            margin-bottom: 1.3rem;
+         }
+         .plat-francaise {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 11px;
+            grid-row-gap: 20px;
+            z-index: -2;
+            .box-menu {
+               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+               text-overflow: ellipsis;
+               overflow: hidden;
+               border-radius: 1rem;
+               label {
+                  display: none;
+               }
+               .menu-container {
+                  display: flex;
+                  overflow: hidden;
+                  max-width: 100%;
+                  .description {
+                     width: 100%;
+                     display: flex;
+                     max-width: 100%;
+                     overflow: hidden;
+                  }
+                  .texte {
+                     width: 100%;
+                     margin-left: 1rem;
+                     max-width: 100%;
+                     overflow: hidden;
+                     * {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        max-width: 100%;
+                     }
+                     h3 {
+                        margin-bottom: 0.3rem;
+                     }
+                     p {
+                        margin-top: 0;
+                        font-size: 16px;
+                        font-weight: 300;
+                     }
+                  }
+                  .price {
+                     display: flex;
+                     align-items: flex-end;
+                     margin-bottom: 1rem;
+                     margin-right: 1rem;
+                     max-width: 100%;
+                     margin-left: 0.5rem;
+                  }
+                  .icon {
+                     width: 7rem;
+                     background: #99e2d0;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     margin-right: -7rem;
+                     transition-duration: 0.5s;
+                     transition-timing-function: ease;
+                     i {
+                        color: #99e2d0;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+                        background: white;
+                        transition-duration: 0.5s;
+                     }
+                  }
+               }
+            }
+            input {
+               appearance: none;
+               width: 92%;
+               height: 5rem;
+               border-radius: 1rem;
+               position: absolute;
+               cursor: pointer;
+               &:checked ~ .menu-container .icon {
+                  margin-right: 0;
+                  transition-duration: 0.5s;
+                  transition-timing-function: ease;
+               }
+               &:checked ~ .menu-container i {
+                  margin-right: 0;
+                  transition-duration: 0.5s;
+                  transition-timing-function: ease;
+                  transform: rotate(360deg);
+                  transition-duration: 0.5s;
+               }
+            }
+         }
+      }
+   }
+}

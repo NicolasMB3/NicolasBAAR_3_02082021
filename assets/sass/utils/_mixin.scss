@@ -5,6 +5,10 @@
    background: rgb(255,121,218);
    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(255,121,218,1) 5%, rgba(147,86,220,1) 100%);
 }
+@mixin box-gradiant2 {
+   background: rgb(248, 151, 221);
+   background: linear-gradient(180deg, rgb(248, 151, 221) 0%, rgb(248, 151, 221) 5%, rrgb(163, 117, 219)100%);
+}
 @mixin display-flex {
    display: flex;
    justify-content: center;
@@ -21,4 +25,8 @@
    margin: 1.5rem 0 1rem 0;
    padding: 15px 35px;
    text-decoration: none;
+}
+@mixin button-gradiant2 {
+   @include box-shadow(5px);
+   @include box-gradiant2;
 }

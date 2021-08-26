@@ -1,7 +1,7 @@
-@use '../components' as *;
+@use '../utils' as *;
 
 .container {
-   .location--container {
+   .reserve--location {
       @include display-flex;
       height: 4rem;
       font-size: 18px;
@@ -12,7 +12,7 @@
             right: 1.3rem;
          }
    }
-   .main--location {
+   .reserve--main {
       @include display-flex;
       flex-direction: column;
       text-align: center;
@@ -29,6 +29,9 @@
          }
          .button__location {
             @include button-gradiant;
+            &:hover {
+               @include button-gradiant2;
+            }
          }
    }
    .main--fonction {
@@ -97,7 +100,7 @@
             position: relative;
             background-color: $light;
             @include box-shadow(20px);
-            .cards--news__grid {
+            .new__position {
                @include display-flex;
                position: absolute;
                right: 5%;
@@ -139,6 +142,7 @@
                   color: $dark;
                }
                i {
+                  color: black;
                   grid-area: div3; 
                   justify-self: center; 
                   align-self: center; 
